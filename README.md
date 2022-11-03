@@ -1,1 +1,1 @@
-This skeeted bio page XD
+This is skeeted bio page XD
