@@ -35,6 +35,14 @@ play.addEventListener("click", () => {
     }
 })
 
+function renderGradientBackground() {
+	alert("asdasdasd")
+	body.style.backgroundImage = `linear-gradient(to bottom, #000000, ${getGradientColor('#FF0000', '#00FF00', 0.4)})`;
+}
+
+document.body.addEventListener("input", renderGradientBackground);
+
+
 function loadSongs() {
     songList.forEach((song, index) => {
         // Create li
