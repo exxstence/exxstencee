@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bio Card Complete</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section class="card">
+    <img src="assets/banner3.png" alt="Header Image" class="background">
+    <div class="avatarBorder">
+      <img src="assets/pfp.png" alt="Avatar Image" class="avatar">
+    </div>
+    <div class="contact">
+      <h6>existence</h6>
+      <h5>The one they are avoiding...</h5>
+    </div>
+
+    <div class="player">
+      <div class="details">
+        <div class="now-playing"></div>
+        <div class="track-art"></div>
+        <div class="track-name">Track Name</div>
+        <div class="track-artist">Track Artist</div>
+      </div>
+      <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+      <div class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+      <div class="buttons">
+        <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+        <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+        <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+      </div>
+    </div>
+  
+    <!-- Load the main script for the player -->
+    <script src="main.js"></script>
+
+
+<br>
+<br>
+<br>
+
+
+    <div class="column">
+      <a target="_blank" href="https://discordapp.com/users/1033847138783862882">
+        <img src="assets/discordicn.png">
+       </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="https://github.com/exxstence">
+        <img src="assets/githubicn.png">
+       </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="https://t.me/exxstence">
+        <img src="assets/telegramicn.png">
+       </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="https://www.instagram.com/exxst3nc3/">
+        <img src="assets/instagramicn.png">
+       </a>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
