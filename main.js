@@ -1,117 +1,92 @@
+const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
 
-let track_art = document.querySelector(".track-art");
-let track_name = document.querySelector(".track-name");
-let track_artist = document.querySelector(".track-artist");
 
-let playpause_btn = document.querySelector(".playpause-track");
-let next_btn = document.querySelector(".next-track");
-let prev_btn = document.querySelector(".prev-track");
+document.addEventListener("DOMContentLoaded", () => {
+  menuOpen.addEventListener("click", () => {
+    overlay.classList.add("overlay--active");
+  });
+  
+  menuClose.addEventListener("click", () => {
+    overlay.classList.remove("overlay--active");
+  });
+  
+});
 
-let seek_slider = document.querySelector(".seek_slider");
-let volume_slider = document.querySelector(".volume_slider");
-let curr_time = document.querySelector(".current-time");
-let total_duration = document.querySelector(".total-duration");
 
-let track_index = 0;
-let isPlaying = false;
-let updateTimer;
+// Get all the anchor tags in the navbar
+const navLinks = document.querySelectorAll('nav ul li a');
 
-// Create new audio element
-let curr_track = document.createElement('audio');
+// Add a click event listener to each anchor tag
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Prevent the default jump-to-anchor behavior
+    event.preventDefault();
+    
+    // Remove the 'active' class from all anchor tags
+    navLinks.forEach(link => link.classList.remove('active'));
+    
+    // Add the 'active' class to the clicked anchor tag
+    this.classList.add('active');
+    
+    // Get the target section's ID from the href attribute
+    const targetId = this.getAttribute('href');
+    
+    // Scroll smoothly to the target section
+    document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-// Define the tracks that have to be played
-let track_list = [
-  {
-    name: "Сумасшедший",
-    artist: "KlouKoma",
-    path: "music/sum.mp3"
-  }
-];
+// Add scroll event listener to highlight the current section in the navbar
+window.addEventListener('scroll', function() {
+  // Get the current vertical scroll position
+  const scrollPosition = window.scrollY;
+  
+  // Iterate through each section
+  document.querySelectorAll('section').forEach(section => {
+    // Calculate the top and bottom offsets of the section
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    
+    // Get the corresponding anchor tag for the section
+    const navLink = document.querySelector(`nav ul li a[href="#${section.id}"]`);
+    
+    // Check if the current scroll position is within the section
+    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+      // Add the 'active' class to the anchor tag
+      navLink.classList.add('active');
+    } else {
+      // Remove the 'active' class from the anchor tag
+      navLink.classList.remove('active');
+    }
+  });
+});
 
-function loadTrack(track_index) {
-  clearInterval(updateTimer);
-  resetValues();
-  curr_track.src = track_list[track_index].path;
-  curr_track.load();
 
-  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
 
-  updateTimer = setInterval(seekUpdate, 1000);
-  curr_track.addEventListener("ended", nextTrack);
-}
 
-function resetValues() {
-  curr_time.textContent = "00:00";
-  total_duration.textContent = "00:00";
-  seek_slider.value = 0;
-}
 
-// Load the first track in the tracklist
-loadTrack(track_index);
+// JS
 
-function playpauseTrack() {
-  if (!isPlaying) playTrack();
-  else pauseTrack();
-}
+let question = document.querySelectorAll(".question");
 
-function playTrack() {
-  curr_track.play();
-  isPlaying = true;
-  playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-}
-
-function pauseTrack() {
-  curr_track.pause();
-  isPlaying = false;
-  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';;
-}
-
-function nextTrack() {
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
-  loadTrack(track_index);
-  playTrack();
-}
-
-function prevTrack() {
-  if (track_index > 0)
-    track_index -= 1;
-  else track_index = track_list.length;
-  loadTrack(track_index);
-  playTrack();
-}
-
-function seekTo() {
-  let seekto = curr_track.duration * (seek_slider.value / 100);
-  curr_track.currentTime = seekto;
-}
-
-function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
-}
-
-function seekUpdate() {
-  let seekPosition = 0;
-
-  if (!isNaN(curr_track.duration)) {
-    seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-
-    seek_slider.value = seekPosition;
-
-    let currentMinutes = Math.floor(curr_track.currentTime / 60);
-    let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
-    let durationMinutes = Math.floor(curr_track.duration / 60);
-    let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
-
-    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
-    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
-    if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
-
-    curr_time.textContent = currentMinutes + ":" + currentSeconds;
-    total_duration.textContent = durationMinutes + ":" + durationSeconds;
-  }
-}
+question.forEach(question => {
+  question.addEventListener("click", event => {
+    const active = document.querySelector(".question.active");
+    if(active && active !== question ) {
+      active.classList.toggle("active");
+      active.nextElementSibling.style.maxHeight = 0;
+    }
+    question.classList.toggle("active");
+    const answer = question.nextElementSibling;
+    if(question.classList.contains("active")){
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = 0;
+    }
+  })
+})
