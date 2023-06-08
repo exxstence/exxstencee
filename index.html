@@ -1,91 +1,338 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Style-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Style-->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Technologijos - Mūsų Ateitis</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">
+        <img
+          src="assets/img/logo-in-page.svg"
+          alt="logo"
+          height="60px"
+          width="auto"
+        />
+      </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Bio Card Complete</title>
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-<body>
-  <br>  
-  <br>  
-  <section class="card">
-    <div class="avatarBorder">
-      <img src="assets/1e3e677296a779a844e5a264d81c9eb8.jpg" alt="Avatar Image" class="avatar">
-    </div>
-    <div class="Bow">
-      <img src="assets/bow.png" alt="Border bow" class="bow">
-    </div>
-    <div class="contact">
-      <h6>exn</h6>
-      <h5>Time is gold...</h5>
-    </div>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li>
+            <a href="#PAGRINDINIS" class="underline-hover-effect"
+              >Pagrindinis</a
+            >
+          </li>
+          <li><a href="#APIE" class="underline-hover-effect">Apie</a></li>
+          <li><a href="#DUK" class="underline-hover-effect">D.U.K.</a></li>
+          <li>
+            <a href="#KONTAKTAI" class="underline-hover-effect">Kontaktai</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <!--PAGRINDINIS-->
+    <div class="Background">
+      <section id="PAGRINDINIS">
+        <header>
+          <div class="container">
+            <div class="text3">
+              <h1 class="title">Technologijos Mūsų Ateityje...</h1>
+              <p class="paragraph">
+                Autonominiai lėktuvai, susivyniojantys televizoriai, prekes pristatantys dronai, internetas iš kosmoso,
+                bioniniai vabzdžiai, savaime šviečiantys medžiai, 3D organų spausdinimas, plaukiojantys miestai,
+                atostogos Marse <br>
+                Visa tai ne fantastika. Tai netolima ateitis, kurią mes kuriame patys!
+              </p>
+            </div>
+            <div class="img animation-container">
+              <img
+                src="assets/img/header-img-1.svg"
+                class="floating"
+                alt="Astronautas"
+              />
+            </div>
+            <br>
+          </div>
+        </header>
+      </section>
+      <!--PAGRINDINIS-->
+      <!--APIE-->
+      <section id="APIE">
+        <br>
+        <h2 class="skyrius">APIE</h2>
+        <div class="card-APIE">
+          <div class="container">
+            <div class="text1">
+              <p class="paragraph1">
+                Esu Justina, man 14 metų. Gyvenu amžiuje, kai išmaniosios technologijos yra neatsiejama
+                mūsų gyvenimo dalis. Kasdien naudojuosi telefonu, navigacija, soc. tinklais, įvairiomis
+                programėlėmis. Nuo mažens buvau smalsi informacinėms technologijoms, o programavimo
+                kelionę pradėjau kaip ir visi vaikai su „Scratch“. <br>
+                Savo ateitį sieju su technologijomis, nes noriu sukurti inovatyvius sprendimus, kurie bus
+                naudingi žmonėms ir mūsų planetai. Taip pat džiaugiuosi turėdama galimybę dalintis savo
+                žiniomis ir patirtimi su vaikais, kad parodyti koks smagus, įdomus ir kūrybingas yra technologijų
+                pasaulis.
+              </p>
+            </div>
+            <div class="img1">
+              <img
+                src="assets/img/card-img.svg"
+                alt=""
+                width="600px"
+                height="auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="player">
-      <div class="details">
-        <div class="now-playing"></div>
-        <div class="track-art"></div>
-        <div class="track-name">Track Name</div>
-        <div class="track-artist">Track Artist</div>
-      </div>
-      <div class="slider_container">
-        <div class="current-time">00:00</div>
-        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-        <div class="total-duration">00:00</div>
-      </div>
-      <div class="slider_container">
-        <i class="fa fa-volume-down"></i>
-        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-        <i class="fa fa-volume-up"></i>
-      </div>
-      <div class="buttons">
-        <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
-        <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
-        <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
-      </div>
-    </div>
+      <!--APIE-->
+  <br>
+      <!--D.U.K.-->
+      <section id="DUK">
+        <br>
+        <h2 class="skyrius">D.U.K.</h2>
+        <div class="wrapper">
   
-    <!-- Load the main script for the player -->
-    <script src="main.js"></script>
+          <div class="container1">
+            <div class="question">
+              1. Kas yra programavimas?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Programavimas yra procesas, kurio metu žmonės kuria algoritmus ir programinį kodą, kad kompiuteris
+                galėtų atlikti tam tikrus veiksmus. Tai leidžia mums kurti programas ir spręsti problemas kompiuterio
+                pagalba. Programavimas yra plačiai naudojamas įvairiose srityse, tokių kaip programinės įrangos,
+                interneto svetainių kūrimas, duomenų analizė, dirbtinis intelektas ir kt. Tai sritis, kuri nuolat vystosi ir
+                turi didelį poreikį kvalifikuotiems specialistams.
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <div class="question">
+              2. Kas yra programavimo kalba?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Programavimo kalba – dirbtinė kalba, skirta programoms užrašyti. Programavimo kalbų pagalba sukurtos
+                programos valdo elektroninių įrenginių, o ypač kompiuterių veikimą.
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <div class="question">
+              3. Ką reiškia raidė „G“ 3G, 4G, 5G ryšio technologijų pavadinimuose?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Raidė „G“ ryšio technologijų pavadinimuose reiškia „karta“ (ang.k. „Generation“).
+                3G, 4G ar 5G reiškia „trečiosios kartos“, ketvirtosios kartos“ ar „penktosios kartos“ mobiliojo ryšio
+                technologija. 1G, arba „pirmosios kartos“ technologija, pradėta diegti XX a. devintajame dešimtmetyje,
+                buvo paprasčiausia, tačiau vėliau technologijos vis tobulėjo ir dabar turime 5G “penktosios kartos” ryšio
+                technologiją.
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <div class="question">
+              4. Kokie bus pagrindiniai nauji technologiniai išradimai ateityje?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Ateities technologijos nuolat vystosi, todėl tikslaus atsakymo nėra. Tačiau galime tikėtis tobulėjančių
+                dirbtinio intelekto sistemų, kvantinio kompiuterių plėtros, nanotechnologijų taikymo, atsinaujinančios
+                energijos šaltinių ir daugelio kitų inovacijų.
+              </div>
+            </div>
+          </div>
+
+          
+          
+            <div class="container1">
+            <div class="question">
+              5. Kaip dirbtinio intelekto (AI) ir mašinų mokymosi technologijos tobulės ateityje?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Dirbtinio intelekto ir mašinų mokymosi technologijos tikėtina toliau plėsis ir tobulės. Galima tikėtis
+                gilesnio supratimo apie žmogaus mąstymo ir kalbos procesus, pažangios automatinio sprendimo
+                priėmimo sistemos, dar labiau išplėtoto mašinų mokymosi ir sprendimų priėmimo algoritmų, taip pat
+                sparčiai besivystančių robotikos sričių.
+              </div>
+            </div>
+          </div>
+          
+              <div class="container1">
+            <div class="question">
+              6. Ar robotika pakeis žmonių darbą ir kas bus su darbo rinka ateityje?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Robotika tikriausiai turės įtakos darbo rinkai ateityje. Naujos technologijos ir automatizavimas gali
+                pakeisti tam tikrus darbo procesus ir reikalauti naujų įgūdžių. Kai kurie darbai gali būti automatizuoti,
+                tačiau tuo pačiu metu atsiras naujų darbo galimybių, susijusių su naujomis technologijomis.
+              </div>
+            </div>
+          </div>
+         
+          <div class="container1">
+            <div class="question">
+              7. Kaip technologijos keičia mokymąsi mokyklose?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Programavimas, robotika, virtualios laboratorijos, edukaciniai vaizdo žaidimai, 3D spausdinimas,
+                fotonika, nanotechnologijos – šios naujai atsirandančios technologijos jau pasiekė mokyklas ir siūlo
+                ugdymo procesui naujas galimybes. Šių technologijų pritaikymas ugdymui yra dar tik ankstyvoje fazėje,
+                bet  vienareikšmiškai turi didelį potencialą STEAM mokyme.
+           
+              </div>
+            </div>
+          </div>
+          
+          <div class="container1">
+            <div class="question">
+              8. Kokie yra pagrindiniai iššūkiai, susiję su ateities technologijomis?
+            </div>
+            <div class="answercont">
+              <div class="answer">
+                Pagrindiniai iššūkiai susiję su ateities technologijomis yra ekologija, saugumas, privatumas ir etika.
+                Svarbu įvertinti technologijų poveikį gamtai ir užtikrinti tvarumą. Taip pat, atsiradus naujoms
+                technologijoms, kyla etiniai klausimai, susiję su privatumu, automatizacija, dirbtiniu intelektu ir kt.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+            <!--D.U.K.-->
 
 
-<br>
-<br>
-<br>
+
+                  <!--Kontaktai-->
+      <section id="KONTAKTAI">
+        <br>
+        <h2 class="skyrius">SUSISIEKITE SU MUMIS</h2>
+        <div class="container5">
+          <div class="paveikslelis">
+            <img src="assets/img/contact-us-img.svg" alt="image">
+          </div>
+          <div class="forma">
+          <form>
+            <label for="Pastas">El. paštas</label> <br>
+            <input type="email" id="Pastas" placeholder="Jūsų el. paštas..."  pattern=".+@gmail\.com" required><br>
+            <label for="Vardas">Vardas</label><br>
+            <input type="text" id="Vardas" placeholder="Jūsų vardas..." required><br>
+            <label for="Vardas">Pranešimas</label><br>
+            <textarea rows="2" cols="25" placeholder="Jūsų tekstas..."></textarea> <br>
+            <div class="sparkle-button">
+
+              <button>
+                <span class="spark"></span>
+                <!-- <span class="spark"></span> -->
+                <span class="backdrop"></span>
+                <svg class="sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="text">Siųsti</span>
+              </button>
+              <div class="bodydrop"></div>
+              </span>
+            </div>
+          </form>
+        </div>
+        </div>
+
+        <div class="phone-and-tablet-contact">
+                    <form>
+            <label for="Pastas">El. paštas</label> <br>
+            <input type="email" id="Pastas" placeholder="Jūsų el. paštas..."  pattern=".+@gmail\.com" required><br>
+            <label for="Vardas">Vardas</label><br>
+            <input type="text" id="Vardas" placeholder="Jūsų vardas..." required><br>
+            <label for="Vardas">Pranešimas</label><br>
+            <textarea rows="2" cols="25" placeholder="Jūsų tekstas..."></textarea> <br>
+            <div class="sparkle-button">
+
+              <button>
+                <span class="spark"></span>
+                <!-- <span class="spark"></span> -->
+                <span class="backdrop"></span>
+                <svg class="sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="text">Siųsti</span>
+              </button>
+              <div class="bodydrop"></div>
+              </span>
+            </div>
+          </form>
+        </div>
+      </section>
+                  <!--Kontaktai-->
 
 
-    <div class="column">
-      <a target="_blank" href="https://discordapp.com/users/1033847138783862882">
-        <img src="assets/discordicn.png">
-       </a>
-    </div>
-    <div class="column">
-      <a target="_blank" href="https://github.com/exxstence">
-        <img src="assets/githubicn.png">
-       </a>
-    </div>
-    <div class="column">
-      <a target="_blank" href="https://t.me/exxstence">
-        <img src="assets/telegramicn.png">
-       </a>
-    </div>
-    <div class="column">
-      <a target="_blank" href="https://www.instagram.com/exxst3nc3/">
-        <img src="assets/instagramicn.png">
-       </a>
-    </div>
 
-  </section>
+    <section>
+      <footer>
+        <div class="footer-content">
+            <h3>TechWorld</h3>
+            <p>Savo internetiniame puslapyje noriu supažindinti lankytoją su ateities
+              technologijomis, programavimo pasauliu bei parodyti kaip įdomu ir
+              lengva yra programuoti.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">TechWorld</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu ">
+                        <li class="underline-hover-effect"><a href="#PAGRINDINIS">Pagrindinis</a></li>
+                        <li class="underline-hover-effect"><a href="#APIE">Apie</a></li>
+                        <li class="underline-hover-effect"><a href="#DUK">D.U.K.</a></li>
+                        <li class="underline-hover-effect"><a href="#KONTAKTAI">Kontaktai</a></li>
+                      </ul>
+                    </div>
+        </div>
 
-</body>
+    </footer>
+    </section>
 
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
